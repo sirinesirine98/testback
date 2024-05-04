@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const RdvSchema = new mongoose.Schema({
-    compte: { type: mongoose.Schema.Types.ObjectId, ref: 'Compte', required: true },
+    compte: { type: String, required: true },
     debut: { type: Date, required: true },
     fin: { type: Date, required: true },
     ancien_debut: { type: Date },
@@ -12,14 +12,14 @@ const RdvSchema = new mongoose.Schema({
     cp: { type: Number },
     ville: { type: String, maxlength: 128 },
     gouvernorat: { type: String, maxlength: 128 },
-    motif: { type: mongoose.Schema.Types.ObjectId, ref: 'MotifRdv', required: true },
+    motif: { type: String, required: true },
     nouveau: { type: Boolean, default: true },
     observation: { type: String, maxlength: 256 },
-    praticien: { type: mongoose.Schema.Types.ObjectId, ref: 'Medecin' },
-    statut: { type: String, default: '1', enum: ['1', '2', '3', '10'] },
+    praticien: { type: String },
+    statut: { type: String, default: '1' },//liste ['1', '2', '3', '10'] 
     motif_modification: { type: String, maxlength: 128 },
-    patient: { type: mongoose.Schema.Types.ObjectId, ref: 'Patient' },
+    patient: { type: String },
     patient_rappele: { type: Boolean, default: false }
-}, { timestamps: true });
+});
 
 module.exports = mongoose.model('Rdv', RdvSchema);

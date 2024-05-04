@@ -1,9 +1,11 @@
 const express = require("express");
-const ConsultationGynecologiqueController = require('../controllers/consultationgynecologique');
-
+const ConsultationGynecologueController = require("../controllers/consultationgynecologique");
 const route = express.Router();
 
-route.get("/consultation-gyneco", ConsultationGynecologiqueController.concultationgynecol);
+route.get("/", ConsultationGynecologueController.GetAllData);
+route.get("/:id", ConsultationGynecologueController.FindDataById);
+route.post("/add", ConsultationGynecologueController.AddData);
+route.put("/:id", ConsultationGynecologueController.UpdateData);
+route.delete("/:id", ConsultationGynecologueController.DeleteData);
 
-
-module.exports = route
+module.exports = route;

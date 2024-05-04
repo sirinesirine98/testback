@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const SuiviTraitementPMASchema = new mongoose.Schema({
-    tentative: { type: mongoose.Schema.Types.ObjectId, ref: 'TentativePMA', required: true },
+    tentative: { type: String,  required: true },
     date: { type: Date, default: null },
-    traitments_valeurs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'TraitementPMA' }],
+    traitments_valeurs: { type: Strin,  },
     oestradiol: { type: String, maxlength: 512, default: null },
     lh: { type: String, maxlength: 512, default: null },
     progesterone: { type: String, maxlength: 512, default: null },

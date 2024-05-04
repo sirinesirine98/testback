@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const FactureSchema = new mongoose.Schema({
-    reglement: { type: mongoose.Schema.Types.ObjectId, ref: 'Reglement', required: true }
+    reglement: { type: String, maxlength:128, required: true }
 }, { timestamps: true });
 
 const Facture = mongoose.model('Facture', FactureSchema);

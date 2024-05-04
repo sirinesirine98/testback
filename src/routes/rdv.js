@@ -1,11 +1,13 @@
+
+
 const express = require("express");
-const RdvController = require('../controllers/rdv');
+const RDVController = require("../controllers/rdv");
+const route = express.Router();
 
-const router = express.Router();
+route.get("/", RDVController.GetAllData);
+route.get("/:id", RDVController.FindDataById);
+route.post("/add", RDVController.AddData);
+route.put("/:id", RDVController.UpdateData);
+route.delete("/:id", RDVController.DeleteData);
 
-router.get("/rdv", RdvController.getRdv);
-
-
-module.exports = router;
-
-
+module.exports = route;

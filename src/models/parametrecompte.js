@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 const ParametresCompteSchema = new mongoose.Schema({
-    compte: { type: mongoose.Schema.Types.ObjectId, ref: 'Compte', required: true },
+    compte: { type: String,  required: true },
     timezone: { type: String, maxlength: 128, default: null },
     duree_rdv_defaut: { type: Number, default: null },
-    praticien_defaut: { type: mongoose.Schema.Types.ObjectId, ref: 'Medecin', default: null },
+    praticien_defaut: { type: String,  default: null },
     antecedents_familiaux_defaut: { type: String, default: null },
     antecedents_medico_chirurgicaux_defaut: { type: String, default: null },
     antecedents_gynecologiques_defaut: { type: String, default: null },

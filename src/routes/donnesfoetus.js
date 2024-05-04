@@ -1,9 +1,11 @@
 const express = require("express");
-const DonnesFoetusController = require('../controllers/donnesfoetus');
-
+const DonneesFoetusController = require("../controllers/donnesfoetus");
 const route = express.Router();
 
-route.get("/foetus", DonnesFoetusController.foetus);
+route.get("/", DonneesFoetusController.GetAllData);
+route.get("/:id", DonneesFoetusController.FindDataById);
+route.post("/add", DonneesFoetusController.AddData);
+route.put("/:id", DonneesFoetusController.UpdateData);
+route.delete("/:id", DonneesFoetusController.DeleteData);
 
-
-module.exports = route
+module.exports = route;
