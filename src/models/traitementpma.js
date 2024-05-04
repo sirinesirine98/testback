@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
 
 const TraitementPMASchema = new mongoose.Schema({
-    compte: { type: mongoose.Schema.Types.ObjectId, ref: 'Compte', required: true },
-    libelle: { type: String, maxlength: 512, default: null }
-}, { timestamps: true });
+    valeur: { type: String, required: true },
+    traitement: { type: String, required: true },
+    suivi: { type: String, required: true },
+    rang: { type: String, required: true },
+
+});
 
 const TraitementPMA = mongoose.model('TraitementPMA', TraitementPMASchema);
 

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const SRConsultationSchema = new mongoose.Schema({
-    consultation: { type: mongoose.Schema.Types.ObjectId, ref: 'Consultation', required: true },
+    consultation: { type:String ,required: true },
     date: { type: Date, required: true },
     data: { type: String, default: null }
 }, { timestamps: true });

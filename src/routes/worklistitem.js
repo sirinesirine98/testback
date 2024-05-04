@@ -1,12 +1,13 @@
 
 
-
 const express = require("express");
-const WorkListItemController = require('../controllers/worklistitem');
-
+const WorklisteController = require("../controllers/Workliste");
 const route = express.Router();
 
-route.get("/worklistitem", WorkListItemController.worklistitem);
+route.get("/", WorklisteController.GetAllData);
+route.get("/:id", WorklisteController.FindDataById);
+route.post("/add", WorklisteController.AddData);
+route.put("/:id", WorklisteController.UpdateData);
+route.delete("/:id", WorklisteController.DeleteData);
 
-
-module.exports = route
+module.exports = route;

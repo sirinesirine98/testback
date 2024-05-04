@@ -1,10 +1,7 @@
-
-
-const concultationgynecol = async (req, res) => {
-    return res
+const ConsultationdGynecologueController = async (req, res) => {
+  return res
       .status(201)
-      .json({ success: true, message: "Consultation gynecologique !!", data: null });
-  };
-  
-  exports.concultationgynecol = concultationgynecol
-  
+      .json({ success: true, message: "Tester ConsultationdGynecologueController from controller !!", data: null });
+};
+
+exports.ConsultationdGynecologueController =  ConsultationdGynecologueController;

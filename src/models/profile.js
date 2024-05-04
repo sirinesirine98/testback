@@ -1,13 +1,11 @@
 const mongoose = require("mongoose");
 
 const ProfilSchema = new mongoose.Schema({
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    compte: { type: mongoose.Schema.Types.ObjectId, ref: 'Compte', required: true },
-    titre: {
-        type: String,
-        enum: ['dr', 'pr', 'mme', 'mlle', 'mr'],
+    user: { type: String , required: true },
+    compte: { type: String,  required: true },
+    titre: {        type: String,       
         required: true
-    },
+    },//['dr', 'pr', 'mme', 'mlle', 'mr']
     code_conventionnel: { type: String, maxlength: 128, default: null },
     date_naissance: { type: Date, default: null },
     telephone_principal: { type: String, maxlength: 20, default: null },
@@ -16,8 +14,8 @@ const ProfilSchema = new mongoose.Schema({
     ajouter_signature_edition: { type: Boolean, default: true },
     code_securite_sociale: { type: String, maxlength: 128, default: null },
     enligne: { type: Number, default: 0 },
-    default_device: { type: mongoose.Schema.Types.ObjectId, ref: 'Device', default: null },
-}, { timestamps: true });
+    default_device: { type: String,   default: null },
+});
 
 const Profil = mongoose.model('Profil', ProfilSchema);
 
