@@ -3,8 +3,7 @@ const mongoose = require("mongoose");
 const ConsultationEcho11SASchema = new mongoose.Schema({
     motif_echo_11sa: { type: String,maxlength: 150, default: null }, //liste:  (  Consultation grossesse,  Consultation gynécologique,  Consultation PMA,  Consultation libre,  Coloposcopie,  Echographie pelvienne,  Echo &lt; 11 SA,  Echo 1er trimestre,  Echo 2ème trimestre,  Echo 3ème trimestre, Echo de croissance,  Echo du col,  Echo cardiofoetale,  Consultation grossesse,  Compte-rendu opératoire,  Interrogatoire PMA,  Monitorage PMA,  Consultation gynécologique libre,  Consultation obstétrique libre )
     patient: { type: String, maxlength: 150, dmaxlength: 150,efault: null }, //patient relation
-    date_echo_11sa: { type: Date,  required: true },  
-    date_echo_11sa: { type: Date,  required: true },  
+     date_echo_11sa: { type: Date,  required: true },  
     praticien: { type: String, maxlength:150,  required: true },  // references
     consultation: { type: String, maxlength: 150, required: true },  //textarea
     conduite: { type: String, maxlength: 150, required: true },  //textarea

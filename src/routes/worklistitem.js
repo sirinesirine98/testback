@@ -1,7 +1,7 @@
 
 
 const express = require("express");
-const WorklisteController = require("../controllers/Workliste");
+const WorklisteController = require("../controllers/worklistitem");
 const route = express.Router();
 
 route.get("/", WorklisteController.GetAllData);

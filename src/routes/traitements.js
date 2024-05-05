@@ -1,13 +1,13 @@
 
 
 const express = require("express");
-const TemplateController = require("../controllers/template");
+const TraitementsController = require("../controllers/traitements");
 const route = express.Router();
 
-route.get("/", TemplateController.GetAllData);
-route.get("/:id", TemplateController.FindDataById);
-route.post("/add", TemplateController.AddData);
-route.put("/:id", TemplateController.UpdateData);
-route.delete("/:id", TemplateController.DeleteData);
+route.get("/", TraitementsController.GetAllData);
+route.get("/:id", TraitementsController.FindDataById);
+route.post("/add", TraitementsController.AddData);
+route.put("/:id", TraitementsController.UpdateData);
+route.delete("/:id", TraitementsController.DeleteData);
 
 module.exports = route;

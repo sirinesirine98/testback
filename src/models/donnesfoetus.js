@@ -1,6 +1,6 @@
-const mongoose = require(mongoose);
+const { Schema, model } = require('mongoose');
 
-const DonneesFoetusSchema = new mongoose.Schema({
+  const DonneesFoetusSchema = new Schema({
   consultation: { type: String , maxlength:128, required: true },
   presentation: { type: String , maxlength:128 },
   Activite_cardiaque: { type: Number },
@@ -68,6 +68,8 @@ const DonneesFoetusSchema = new mongoose.Schema({
   commentaires: { type: String , maxlength:128 },
 });
 
-const DonneesFoetus = mongoose.model('DonneesFoetus', DonneesFoetusSchema);
+ 
+
+const DonneesFoetus = model('DonneesFoetus', DonneesFoetusSchema);
 
 module.exports = DonneesFoetus;

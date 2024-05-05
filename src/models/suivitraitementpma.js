@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const SuiviTraitementPMASchema = new mongoose.Schema({
     tentative: { type: String,  required: true },
     date: { type: Date, default: null },
-    traitments_valeurs: { type: Strin,  },
+    traitments_valeurs: { type: String,  },
     oestradiol: { type: String, maxlength: 512, default: null },
     lh: { type: String, maxlength: 512, default: null },
     progesterone: { type: String, maxlength: 512, default: null },

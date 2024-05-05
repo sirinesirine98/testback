@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ConsultationColposcopieSchema = new mongoose.Schema({
+const ConsultationEchoCroissanceSchema = new mongoose.Schema({
     motif_cc: { type: String,maxlength: 150, default: null }, //liste:  (  Consultation grossesse,  Consultation gynécologique,  Consultation PMA,  Consultation libre,  Coloposcopie,  Echographie pelvienne,  Echo &lt; 11 SA,  Echo 1er trimestre,  Echo 2ème trimestre,  Echo 3ème trimestre, Echo de croissance,  Echo du col,  Echo cardiofoetale,  Consultation grossesse,  Compte-rendu opératoire,  Interrogatoire PMA,  Monitorage PMA,  Consultation gynécologique libre,  Consultation obstétrique libre )
     patient: { type: String, maxlength: 150, dmaxlength: 150,efault: null }, //patient relation
     praticien: { type: String,  default: null }, //praticien relation
@@ -38,6 +38,6 @@ const ConsultationColposcopieSchema = new mongoose.Schema({
 });
 
 
-const ConsultationColposcopie = mongoose.model('ConsultationColposcopie', ConsultationColposcopieSchema);
+const ConsultationEchoCroissance = mongoose.model('ConsultationEchoCroissance', ConsultationEchoCroissanceSchema);
 
-module.exports = ConsultationColposcopie;
+module.exports = ConsultationEchoCroissance;

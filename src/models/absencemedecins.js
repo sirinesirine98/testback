@@ -9,6 +9,6 @@ const AbsencemedecinSchema = new mongoose.Schema({
     praticienremplacant: { type: Number, default: null },
   });
 
-const Absencemedecin = mongoose.model('absencemedecin', AbsencemedecinSchema);
+const Absencemedecin = mongoose.model('Absencemedecin', AbsencemedecinSchema);
 
 module.exports = Absencemedecin;

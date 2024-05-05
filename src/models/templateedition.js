@@ -1,4 +1,5 @@
-// Définition du schéma TemplateEdition
+const mongoose = require("mongoose");
+
 const TemplateEditionSchema = new mongoose.Schema({
     compte: { type: String , required: true },
     categorie_consultation: { type:String ,  required: true },
