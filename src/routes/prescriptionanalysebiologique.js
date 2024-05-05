@@ -1,7 +1,7 @@
 
 
 const express = require("express");
-const PrescriptionAnalysesController = require("../controllers/PrescriptionAnalysess");
+const PrescriptionAnalysesController = require("../controllers/prescriptionanalysebiologique");
 const route = express.Router();
 
 route.get("/", PrescriptionAnalysesController.GetAllData);
